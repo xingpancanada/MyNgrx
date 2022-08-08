@@ -1,0 +1,23 @@
+<div class="container">
+  <p>orders works!</p>
+  <div class="card mt-3 text-center p-3">
+
+    <input class="m-3" type="text" [(ngModel)]="newOrder" placeholder="new order" />
+
+    <div>
+      <button class="btn btn-primary m-1" (click)="createOrder()" style="width: 10rem;">Add</button>
+    </div>
+
+
+
+    <div *ngFor="let order of orders$ | async" class="m-3">
+      {{order.id}}: {{order.title}}
+    </div>
+
+    <div class="m-3" *ngFor="let ot of ordersTest" (click)="goDetail(ot)">
+      {{ot.id}}: {{ot.title}}
+    </div>
+
+  </div>
+  <a class="px-4" style="font-size: medium;" routerLink="">GO HOME</a>
+</div>

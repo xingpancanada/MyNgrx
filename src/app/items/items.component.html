@@ -1,0 +1,26 @@
+<div class="container">
+  <p>items works!</p>
+  <div class="card mt-3 text-center p-3">
+
+    <input class="m-3" type="text" [(ngModel)]="newItem" placeholder="new item" />
+
+    <div>
+      <button class="btn btn-primary m-1" (click)="createItem()" style="width: 10rem;">Add</button>
+    </div>
+
+    <!-- <div *ngIf="selectedProduct" class="mt-5">
+      <input type="text" [(ngModel)]="selectedProduct.name" >
+      <button class="btn btn-sm btn-danger mx-3" style="width: 5rem;" (click)="update()">Update</button>
+    </div> -->
+
+    <div *ngFor="let item of items$ | async" class="m-3">
+      {{item.id}}: {{item.title}}
+      <!-- <button  *ngIf="product.name" class="btn btn-sm btn-primary mx-3" (click)="select(product)" style="width: 5rem;">Select</button>
+      <button  *ngIf="product.name" class="btn btn-sm btn-danger mx-3" (click)="delete(product)" style="width: 5rem;">Delete</button> -->
+    </div>
+
+
+  </div>
+
+
+</div>

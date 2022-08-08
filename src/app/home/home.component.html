@@ -1,7 +1,9 @@
-<!-- <div class="container">
+<p>home works!</p>
+
+<div class="container">
   <div class="card mt-3 text-center p-3">
     <h1>
-      Welcome to {{ title }}
+      Welcome to BigAl's
     </h1>
     <h5>Value: {{ counter$ | async }}</h5>
 
@@ -16,7 +18,7 @@
       <button class="btn btn-sm btn-danger mx-3" style="width: 5rem;" (click)="update()">Update</button>
     </div>
 
-    <div *ngFor="let product of products$ | async" class="m-3">
+    <div *ngFor="let product of (products$ | async)" class="m-3">
       {{product.name}}
       <button  *ngIf="product.name" class="btn btn-sm btn-primary mx-3" (click)="select(product)" style="width: 5rem;">Select</button>
       <button  *ngIf="product.name" class="btn btn-sm btn-danger mx-3" (click)="delete(product)" style="width: 5rem;">Delete</button>
@@ -26,19 +28,5 @@
   </div>
 </div>
 
-<hr/> -->
-
-<!-- <app-items class="mt-5"></app-items> -->
-
-<div class="container mt-3">
-  <p>{{ isLoading$ | async }} 111111</p>
-
-  <div *ngFor="let product of products$ | async" class="m-3">
-    {{product.name}}
-  </div>
-</div>
-
-<router-outlet></router-outlet>
-
-
-<!-- <a class="px-4" style="font-size: medium;" routerLink="/orders">ORDERS</a> -->
+<!-- <a class="px-4" style="font-size: medium;" routerLink="/items">ITEMS</a> -->
+<a class="px-4" style="font-size: medium;" routerLink="/orders">ORDERS</a>
